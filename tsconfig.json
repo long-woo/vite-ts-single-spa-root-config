@@ -1,0 +1,11 @@
+{
+  "extends": "ts-config-single-spa",
+  "files": ["src/root-config.ts"],
+  "compilerOptions": {
+    "declarationDir": "dist",
+    "isolatedModules": true,
+    "composite": true
+  },
+  "include": ["env.d.ts", "vite.config.*", "src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}
