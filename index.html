@@ -89,11 +89,12 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-
+  {{#unless isLocal}}
+  <script type="module" src="./src/main.ts"></script>
+  {{/unless}}
   <script>
     System.import("root-config")
   </script>
-  <script type="module" src="./src/main.ts"></script>
 
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>

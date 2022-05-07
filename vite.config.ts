@@ -9,14 +9,15 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       rollupOptions: {
-        preserveEntrySignatures: 'strict',
         output: {
           format: 'systemjs',
           entryFileNames: 'root-config.js',
+          assetFileNames: 'assets/[name].[ext]',
           globals: {
             'single-spa': 'SingleSpa',
           }
         },
+        preserveEntrySignatures: 'strict',
         external: ["single-spa"],
       },
     },
