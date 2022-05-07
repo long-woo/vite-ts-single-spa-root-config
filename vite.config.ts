@@ -1,38 +1,37 @@
 import { defineConfig } from "vite";
-import { createHtmlPlugin } from "vite-plugin-html";
 import legacy from "@vitejs/plugin-legacy";
+import handlebars from 'vite-plugin-handlebars';
 
-// console.log(import.meta.env)
 export default defineConfig(({ mode }) => {
   return {
+    base: './',
     server: {
       port: 9000,
     },
     build: {
       rollupOptions: {
-        input: "src/lyh-root-config.ts",
         output: {
-          file: "dist/root-config.js",
-          format: "system",
+          format: 'systemjs',
+          entryFileNames: 'root-config.js',
+          globals: {
+            'single-spa': 'SingleSpa',
+          }
         },
-        external: ["single-spa", "single-spa-layout"],
+        external: ["single-spa"],
       },
     },
     plugins: [
-      createHtmlPlugin({
-        entry: "src/root-config.ts",
-        template: "src/index.html",
-        inject: {
-          data: {
-            isLocal: mode === "development",
-          },
-        },
-      }),
       legacy({
         targets: ["ie >= 11"],
         additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
         externalSystemJS: true,
+        renderLegacyChunks: false
       }),
+      handlebars({
+        context: {
+          isLocal: mode === "development"
+        }
+      })
     ],
   };
 });

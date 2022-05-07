@@ -1,6 +1,6 @@
 {
   "extends": "ts-config-single-spa",
-  "files": ["src/root-config.ts"],
+  "files": ["src/main.ts"],
   "compilerOptions": {
     "declarationDir": "dist",
     "isolatedModules": true,
