@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import legacy from "@vitejs/plugin-legacy";
 import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig(({ mode }) => {
@@ -10,6 +9,7 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       rollupOptions: {
+        preserveEntrySignatures: 'strict',
         output: {
           format: 'systemjs',
           entryFileNames: 'root-config.js',
@@ -21,12 +21,6 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins: [
-      legacy({
-        targets: ["ie >= 11"],
-        additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
-        externalSystemJS: true,
-        renderLegacyChunks: false
-      }),
       handlebars({
         context: {
           isLocal: mode === "development"
