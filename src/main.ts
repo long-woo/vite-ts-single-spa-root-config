@@ -9,9 +9,7 @@ import microfrontendLayout from "./microfrontend-layout.html?raw";
 const routes = constructRoutes(microfrontendLayout);
 const applications = constructApplications({
   routes,
-  loadApp({ name }) {
-    return System.import(name);
-  },
+  loadApp: ({ name }) => import(/* @vite-ignore */ name),
 });
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
