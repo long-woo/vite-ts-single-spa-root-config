@@ -1,8 +1,10 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv, UserConfigExport } from "vite";
 import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig(({ mode }) => {
-  return {
+  const env = loadEnv(mode, process.cwd());
+  
+  const config: UserConfigExport = {
     base: './',
     server: {
       port: 9000,
@@ -28,5 +30,11 @@ export default defineConfig(({ mode }) => {
         }
       })
     ],
-  };
+  }
+
+  if (mode === 'docs') {
+    config.build.outDir = env.VITE_OUTDIR
+  }
+
+  return config;
 });

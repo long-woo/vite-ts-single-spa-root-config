@@ -4,13 +4,15 @@
   "description": "A single-spa using vite and typescript.",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "build:docs": "vite build -m docs"
   },
   "dependencies": {
     "single-spa": "^5.9.3",
     "single-spa-layout": "^1.6.0"
   },
   "devDependencies": {
+    "@types/node": "^17.0.31",
     "@types/systemjs": "^6.1.1",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
