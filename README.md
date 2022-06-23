@@ -5,11 +5,11 @@ Create a root config example of single-spa using vite and typescript.
 ## Development
 
 ```sh
-pnpm run dev
+pnpm dev
 ```
 
 ## Build
 
 ```sh
-pnpm run build
+pnpm build
 ```
