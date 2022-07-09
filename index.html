@@ -42,16 +42,15 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.3/lib/system/single-spa.min.js",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.4/lib/system/single-spa.min.js",
         "vue": "https://cdn.jsdelivr.net/npm/vue@3.2.33/dist/vue.global.prod.js",
         "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@4.0.14/dist/vue-router.global.prod.js",
         "pinia": "https://cdn.jsdelivr.net/npm/pinia@2.0.13/dist/pinia.iife.prod.js",
-        "single-spa-vue": "https://cdn.jsdelivr.net/npm/single-spa-vue@2.5.1/dist/umd/single-spa-vue.min.js",
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
+        "single-spa-vue": "https://cdn.jsdelivr.net/npm/single-spa-vue@2.5.1/dist/umd/single-spa-vue.min.js"
       }
     }
   </script>
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.3/lib/system/single-spa.min.js" as="script">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.4/lib/system/single-spa.min.js" as="script">
 
   <!-- Add your organization's prod import map URL to this script's src  -->
   <script type="systemjs-importmap" src="/importmap.json"></script>
@@ -89,9 +88,6 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  {{#unless isLocal}}
-  <script type="module" src="./src/main.ts"></script>
-  {{/unless}}
   <script>
     System.import("root-config")
   </script>
