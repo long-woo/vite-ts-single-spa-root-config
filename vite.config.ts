@@ -1,5 +1,3 @@
-import fs from 'fs';
-
 import { defineConfig, loadEnv, UserConfigExport } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
 
@@ -34,15 +32,7 @@ export default defineConfig(({ mode }) => {
 				context: {
 					isLocal: mode === 'development'
 				}
-			}),
-			{
-				name: 'vite-plugin-build-rm-file',
-				apply: 'build',
-				enforce: 'post',
-				closeBundle() {
-					fs.unlinkSync(`${env.VITE_OUTDIR}/index.js`);
-				}
-			}
+			})
 			// {
 			// 	name: 'vite-plugin-systemjs-module',
 			// 	enforce: 'pre',
