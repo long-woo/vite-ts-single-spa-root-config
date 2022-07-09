@@ -1,40 +1,63 @@
-import { defineConfig, loadEnv, UserConfigExport } from "vite";
+import fs from 'fs';
+
+import { defineConfig, loadEnv, UserConfigExport } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd());
-  
-  const config: UserConfigExport = {
-    base: './',
-    server: {
-      port: 9000,
-    },
-    build: {
-      rollupOptions: {
-        output: {
-          format: 'systemjs',
-          entryFileNames: 'root-config.js',
-          assetFileNames: 'assets/[name].[ext]',
-          globals: {
-            'single-spa': 'SingleSpa',
-          }
-        },
-        preserveEntrySignatures: 'strict',
-        external: ["single-spa"],
-      },
-    },
-    plugins: [
-      handlebars({
-        context: {
-          isLocal: mode === "development"
-        }
-      })
-    ],
-  }
+	const env = loadEnv(mode, process.cwd());
 
-  if (mode === 'docs') {
-    config.build.outDir = env.VITE_OUTDIR
-  }
+	const config: UserConfigExport = {
+		base: './',
+		server: {
+			port: 9000
+		},
+		build: {
+			rollupOptions: {
+				input: {
+					index: './index.html',
+					'root-config': './src/main.ts'
+				},
+				output: {
+					format: 'system',
+					entryFileNames: '[name].js',
+					assetFileNames: 'assets/[name][ext]',
+					globals: {
+						'single-spa': 'SingleSpa'
+					}
+				},
+				preserveEntrySignatures: 'strict',
+				external: ['single-spa']
+			}
+		},
+		plugins: [
+			handlebars({
+				context: {
+					isLocal: mode === 'development'
+				}
+			}),
+			{
+				name: 'vite-plugin-build-rm-file',
+				apply: 'build',
+				enforce: 'post',
+				closeBundle() {
+					fs.unlinkSync(`${env.VITE_OUTDIR}/index.js`);
+				}
+			}
+			// {
+			// 	name: 'vite-plugin-systemjs-module',
+			// 	enforce: 'pre',
+			// 	apply: 'build',
+			// 	transformIndexHtml: (html, ctx) => {
+			// 		console.log(/type="systemjs-module"/.test(html));
+			// 		return html;
+			// 	}
+			// }
+		]
+	};
 
-  return config;
+	if (mode === 'docs') {
+		config.build.outDir = env.VITE_OUTDIR;
+	}
+
+	return config;
 });
