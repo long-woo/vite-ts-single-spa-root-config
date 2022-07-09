@@ -1,5 +1,6 @@
 {
   "imports": {
-    "root-config": "./root-config.js"
+    "root-config": "./root-config.js",
+    "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
   }
 }
