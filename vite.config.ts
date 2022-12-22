@@ -1,3 +1,6 @@
+import fs from 'fs';
+
+import type { PluginOption } from 'vite';
 import { defineConfig, loadEnv, UserConfigExport } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
 
@@ -20,11 +23,12 @@ export default defineConfig(({ mode }) => {
 					entryFileNames: '[name].js',
 					assetFileNames: 'assets/[name][ext]',
 					globals: {
-						'single-spa': 'SingleSpa'
+						'single-spa': 'singleSpa',
+						'single-spa-layout': 'singleSpaLayout'
 					}
 				},
 				preserveEntrySignatures: 'strict',
-				external: ['single-spa']
+				external: ['single-spa', 'single-spa-layout']
 			}
 		},
 		plugins: [
@@ -32,7 +36,15 @@ export default defineConfig(({ mode }) => {
 				context: {
 					isLocal: mode === 'development'
 				}
-			})
+			}) as unknown as PluginOption,
+			{
+				name: 'vite-plugin-build-rm-file',
+				apply: 'build',
+				enforce: 'post',
+				closeBundle() {
+					fs.unlinkSync(`${env.VITE_OUTDIR}/index.js`);
+				}
+			}
 			// {
 			// 	name: 'vite-plugin-systemjs-module',
 			// 	enforce: 'pre',
