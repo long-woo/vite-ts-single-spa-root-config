@@ -45,15 +45,6 @@ export default defineConfig(({ mode }) => {
 					fs.unlinkSync(`${env.VITE_OUTDIR}/index.js`);
 				}
 			}
-			// {
-			// 	name: 'vite-plugin-systemjs-module',
-			// 	enforce: 'pre',
-			// 	apply: 'build',
-			// 	transformIndexHtml: (html, ctx) => {
-			// 		console.log(/type="systemjs-module"/.test(html));
-			// 		return html;
-			// 	}
-			// }
 		]
 	};
 
