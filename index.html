@@ -44,8 +44,8 @@
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.4/lib/system/single-spa.min.js",
         "single-spa-layout": "https://unpkg.liangyihui.net/single-spa-layout@2.1.0/dist/system/single-spa-layout.min.js",
-        "vue": "https://cdn.jsdelivr.net/npm/vue@3.2.33/dist/vue.global.prod.js",
-        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@4.0.14/dist/vue-router.global.prod.js",
+        "vue": "https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js",
+        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@4.1.6/dist/vue-router.global.prod.js",
         "pinia": "https://cdn.jsdelivr.net/npm/pinia@2.0.13/dist/pinia.iife.prod.js",
         "single-spa-vue": "https://cdn.jsdelivr.net/npm/single-spa-vue@2.5.1/dist/umd/single-spa-vue.min.js"
       }
@@ -80,6 +80,8 @@
   <!-- 如果是 TypeScript，需要导入 systemjs-babel -->
   <script src="https://cdn.jsdelivr.net/npm/systemjs-babel@0.3.1/dist/systemjs-babel.js"></script>
   {{else}}
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue-router@4.1.6/dist/vue-router.global.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.12.1/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.12.1/dist/extras/amd.min.js"></script>
   {{/if}}
@@ -89,7 +91,13 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <!-- <script type="systemjs-module" src="./src/main.ts"></script> -->
+  {{#unless isLocal}}
+    <!-- 加载 Vue3 -->
+		<script>
+			System.set(System.resolve('vue'), window.Vue);
+			System.set(System.resolve('vue-router'), window.VueRouter);
+		</script>
+	{{/unless}}
   <script>
     System.import('root-config');
   </script>
