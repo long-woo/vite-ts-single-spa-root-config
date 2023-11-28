@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@loongwoo/eslint-config-typescript-prettier': ^1.1.0
-  '@types/node': ^18.13.0
+  '@types/node': ^20.0.0
   '@types/systemjs': ^6.13.1
   eslint: ^8.33.0
   prettier: ^3.0.0
@@ -19,13 +19,13 @@ dependencies:
 
 devDependencies:
   '@loongwoo/eslint-config-typescript-prettier': 1.1.0_l7r3zeuaeptjw6fy2myotoydj4
-  '@types/node': 18.13.0
+  '@types/node': 20.10.0
   '@types/systemjs': 6.13.1
   eslint: 8.33.0
   prettier: 3.0.0
   ts-config-single-spa: 3.0.0
   typescript: 5.0.2
-  vite: 5.0.0_@types+node@18.13.0
+  vite: 5.0.0_@types+node@20.10.0
   vite-plugin-handlebars: 1.6.0
 
 packages:
@@ -413,8 +413,10 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
-  /@types/node/18.13.0:
-    resolution: {integrity: sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg==}
+  /@types/node/20.10.0:
+    resolution: {integrity: sha512-D0WfRmU9TQ8I9PFx9Yc+EBHw+vSpIub4IDvQivcp26PtPrdMGAq5SDcpXEo/epqa/DXotVpekHiLNTg3iaKXBQ==}
+    dependencies:
+      undici-types: 5.26.5
     dev: true
 
   /@types/parse5/6.0.3:
@@ -1151,14 +1153,6 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
   /fsevents/2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -1551,7 +1545,7 @@ packages:
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /rollup/4.4.1:
@@ -1712,6 +1706,10 @@ packages:
     dev: true
     optional: true
 
+  /undici-types/5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
+
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
@@ -1750,10 +1748,10 @@ packages:
       resolve: 1.22.1
       rollup: 2.77.3
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
-  /vite/5.0.0_@types+node@18.13.0:
+  /vite/5.0.0_@types+node@20.10.0:
     resolution: {integrity: sha512-ESJVM59mdyGpsiNAeHQOR/0fqNoOyWPYesFto8FFZugfmhdHx8Fzd8sF3Q/xkVhZsyOxHfdM7ieiVAorI9RjFw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -1781,7 +1779,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.13.0
+      '@types/node': 20.10.0
       esbuild: 0.19.5
       postcss: 8.4.31
       rollup: 4.4.1
