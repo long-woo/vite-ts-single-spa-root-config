@@ -33,7 +33,7 @@ jobs:
         cache: 'pnpm'
       
     - run: pnpm i --no-frozen-lockfile
-    - run: build:docs
+    - run: pnpm build:docs
     - run: |
         git config user.name loong.woo
         git config user.email longwunet@outlook.com
