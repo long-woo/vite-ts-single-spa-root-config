@@ -7,7 +7,7 @@ settings:
 dependencies:
   single-spa:
     specifier: ^6.0.0
-    version: 6.0.0
+    version: 6.0.1
   single-spa-layout:
     specifier: ^2.1.0
     version: 2.2.0
@@ -1576,11 +1576,11 @@ packages:
       '@types/parse5': 6.0.3
       merge2: 1.4.1
       parse5: 6.0.1
-      single-spa: 6.0.0
+      single-spa: 6.0.1
     dev: false
 
-  /single-spa@6.0.0:
-    resolution: {integrity: sha512-wFHWD0dNHb1oJF1yGWIkvIpovUUGyES2ljkqy80wMIC73AdCTcKCyJBP1DqoU8pUZrfu2ccLaFIKL2PVrAOpOg==}
+  /single-spa@6.0.1:
+    resolution: {integrity: sha512-JsJSnjaeBJ+uZCqKwfI06AsaHlqfr2jvDqz+1we8tDxptYnDEi54C2M6W0XY2FLroro9Wnh3+ooEUEwcOileGg==}
     dev: false
 
   /slash@3.0.0:
