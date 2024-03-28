@@ -8,18 +8,22 @@
     "build:docs": "vite build -m docs"
   },
   "dependencies": {
-    "single-spa": "^6.0.0",
-    "single-spa-layout": "^2.1.0"
+    "single-spa": "^6.0.1",
+    "single-spa-layout": "^2.2.0"
   },
   "devDependencies": {
-    "@loongwoo/eslint-config-typescript-prettier": "^1.1.0",
-    "@types/node": "^20.0.0",
-    "@types/systemjs": "^6.13.1",
-    "eslint": "^8.33.0",
-    "prettier": "^3.0.0",
+    "@loongwoo/eslint-config-typescript-prettier": "^1.2.0",
+    "@loongwoo/tailwind": "^1.0.0",
+    "@types/node": "^20.11.30",
+    "@types/systemjs": "^6.13.5",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.3",
     "ts-config-single-spa": "^3.0.0",
-    "typescript": "^5.0.0",
-    "vite": "^5.0.0",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.6",
     "vite-plugin-handlebars": "^2.0.0"
   }
 }

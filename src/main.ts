@@ -4,6 +4,8 @@ import {
 	constructRoutes,
 	constructLayoutEngine
 } from 'single-spa-layout';
+import '@loongwoo/tailwind';
+
 import microfrontendLayout from './microfrontend-layout.html?raw';
 
 const routes = constructRoutes(microfrontendLayout);
