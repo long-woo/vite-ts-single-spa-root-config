@@ -24,7 +24,7 @@ dependencies:
 devDependencies:
   '@loongwoo/eslint-config-typescript-prettier': 1.3.1_hd276s5szk6ttrm4tdwpyir4jm
   '@loongwoo/tailwind': 1.0.0
-  '@types/node': 20.14.2
+  '@types/node': 20.14.3
   '@types/systemjs': 6.13.5
   autoprefixer: 10.4.19_postcss@8.4.38
   eslint: 9.4.0
@@ -33,8 +33,8 @@ devDependencies:
   tailwindcss: 3.4.4
   ts-config-single-spa: 3.0.0
   typescript: 5.4.5
-  vite: 5.2.12_@types+node@20.14.2
-  vite-plugin-handlebars: 2.0.0_@types+node@20.14.2
+  vite: 5.2.12_@types+node@20.14.3
+  vite-plugin-handlebars: 2.0.0_@types+node@20.14.3
 
 packages:
 
@@ -543,8 +543,8 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
-  /@types/node/20.14.2:
-    resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
+  /@types/node/20.14.3:
+    resolution: {integrity: sha512-Nuzqa6WAxeGnve6SXqiPAM9rA++VQs+iLZ1DDd56y0gdvygSZlQvZuvdFPR3yLqkVxPu4WrO02iDEyH1g+wazw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1241,7 +1241,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.17.4
+      uglify-js: 3.18.0
     dev: true
 
   /has-flag/4.0.0:
@@ -1953,8 +1953,8 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js/3.17.4:
-    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
+  /uglify-js/3.18.0:
+    resolution: {integrity: sha512-SyVVbcNBCk0dzr9XL/R/ySrmYf0s372K6/hFklzgcp2lBFyXtw4I7BOdDjlLhE1aVqaI/SHWXWmYdlZxuyF38A==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
@@ -1986,11 +1986,11 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-  /vite-plugin-handlebars/2.0.0_@types+node@20.14.2:
+  /vite-plugin-handlebars/2.0.0_@types+node@20.14.3:
     resolution: {integrity: sha512-+J3It0nyhPzx4nT1I+fnWH+jShTEXzm6X0Tgsggdm9IYFD7/eJ6a3ROI13HTe0CVoyaxm/fPxH5HDAKyfz7T0g==}
     dependencies:
       handlebars: 4.7.8
-      vite: 5.2.12_@types+node@20.14.2
+      vite: 5.2.12_@types+node@20.14.3
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -2001,7 +2001,7 @@ packages:
       - terser
     dev: true
 
-  /vite/5.2.12_@types+node@20.14.2:
+  /vite/5.2.12_@types+node@20.14.3:
     resolution: {integrity: sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2029,7 +2029,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.14.2
+      '@types/node': 20.14.3
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.18.0
