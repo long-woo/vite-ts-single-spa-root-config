@@ -25,7 +25,7 @@ devDependencies:
   '@loongwoo/eslint-config-typescript-prettier': 1.3.1_hd276s5szk6ttrm4tdwpyir4jm
   '@loongwoo/tailwind': 1.0.0
   '@types/node': 20.14.3
-  '@types/systemjs': 6.13.5
+  '@types/systemjs': 6.15.0
   autoprefixer: 10.4.19_postcss@8.4.38
   eslint: 9.4.0
   postcss: 8.4.38
@@ -553,8 +553,8 @@ packages:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: false
 
-  /@types/systemjs/6.13.5:
-    resolution: {integrity: sha512-VWG7Z1/cb90UQF3HjkVcE+PB2kts93mW/94XQ2XUyHk+4wpzVrTdfXw0xeoaVyI/2XUuBRuCA7Is25RhEfHXNg==}
+  /@types/systemjs/6.15.0:
+    resolution: {integrity: sha512-cnlGl3wretbgmtNOo43OtIUctcAeXddy+vrBFp4Pz2spuEfsTS/sol0KsUG1qmP1OeU4SgbRYPKxNIlkkXdUBQ==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/8.0.0-alpha.14_sepd5re6expk6owx4d7gspud7i:
@@ -1241,7 +1241,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.18.0
+      uglify-js: 3.19.3
     dev: true
 
   /has-flag/4.0.0:
@@ -1956,8 +1956,8 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js/3.18.0:
-    resolution: {integrity: sha512-SyVVbcNBCk0dzr9XL/R/ySrmYf0s372K6/hFklzgcp2lBFyXtw4I7BOdDjlLhE1aVqaI/SHWXWmYdlZxuyF38A==}
+  /uglify-js/3.19.3:
+    resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
