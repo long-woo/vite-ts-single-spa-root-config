@@ -18,7 +18,7 @@ specifiers:
   vite-plugin-handlebars: ^2.0.0
 
 dependencies:
-  single-spa: 6.0.1
+  single-spa: 6.0.2
   single-spa-layout: 2.2.0
 
 devDependencies:
@@ -1241,7 +1241,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.18.0
+      uglify-js: 3.19.3
     dev: true
 
   /has-flag/4.0.0:
@@ -1756,11 +1756,11 @@ packages:
       '@types/parse5': 6.0.3
       merge2: 1.4.1
       parse5: 6.0.1
-      single-spa: 6.0.1
+      single-spa: 6.0.2
     dev: false
 
-  /single-spa/6.0.1:
-    resolution: {integrity: sha512-JsJSnjaeBJ+uZCqKwfI06AsaHlqfr2jvDqz+1we8tDxptYnDEi54C2M6W0XY2FLroro9Wnh3+ooEUEwcOileGg==}
+  /single-spa/6.0.2:
+    resolution: {integrity: sha512-xCq58THg6Y3mJ94xgZhi6AtqN9IUfU/Pxb7ii9Qv8wiINlvtlXrTTMcTZ4zpr+M/CdpUbp5KmsqGmDVPwht50g==}
     dev: false
 
   /slash/3.0.0:
@@ -1956,8 +1956,8 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js/3.18.0:
-    resolution: {integrity: sha512-SyVVbcNBCk0dzr9XL/R/ySrmYf0s372K6/hFklzgcp2lBFyXtw4I7BOdDjlLhE1aVqaI/SHWXWmYdlZxuyF38A==}
+  /uglify-js/3.19.3:
+    resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
